@@ -1,0 +1,43 @@
+$font: (
+  family: ('Source Sans Pro', Helvetica, sans-serif),
+  family-heading: ('Raleway', Helvetica, sans-serif),
+  resume: ('Calibri', Times, serif),
+  resume-heading: ('Times New Roman', Times, serif),
+  weight: 400,
+  weight-heading: 400,
+  kerning-heading: 0.25em,
+  kerning-name: 0.1em,
+  weight-heading-bold: 800,
+);
+
+$palette: (
+  border: rgba(160,160,160,0.3),
+  aboutBorder: rgba(112,128,144,1),
+  projectBorder: rgba(121,151,238,1),
+  bg: #ffffff,
+  bg-alt: #f4f4f4,
+  fg: #646464,
+  fg-light: #aaaaaa,
+  fg-bold: #3c3b3b,
+  fg-transparent: rgba(255,255,255,0.95),
+  accent: #2e59ba,
+  black: #000000,
+);
+
+$size: (
+  element-height:	2.75em,
+  element-margin:	2em,
+  section-spacing:	3em,
+  section-spacing-small:	1.5em,
+  menu:	25em,
+  name-size: 5em,
+  name-size-large: 4em,
+  name-size-medium: 3em,
+  med-code: 0.7em,
+);
+
+$breakpoints: (
+  'small':  367px,
+  'medium': 800px,
+  'large':  1000px,
+) !default;

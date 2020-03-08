@@ -1,0 +1,11 @@
+@function _palette($keys...) {
+	@return map-get($palette, $keys...);
+}
+
+@function _font($keys...) {
+	@return map-get($font, $keys...);
+}
+
+@function _size($keys...) {
+	@return map-get($size, $keys...);
+}

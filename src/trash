@@ -1,0 +1,81 @@
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+background-color: #282c34;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+font-size: calc(10px + 2vmin);
+color: white;
+
+
+
+
+import React, { useState, useEffect, useRef } from "react"
+import { Link } from 'react-router-dom';
+
+const messages = ['Parthib Samadder']
+
+function useInterval (callback, delay) {
+
+  const savedCallback = useRef();
+
+  useEffect(() => {
+    savedCallback.current = callback;
+  }, [callback]);
+
+  useEffect(() => {
+    if (delay) {
+      const id = setInterval(() => {
+        savedCallback.current();
+      }, delay);
+      return () => clearInterval(id);
+    }
+    return () => {};
+  }, [delay]);
+};
+
+function Home(props) {
+
+  const hold = 20;
+  const delay = 50;
+
+  const [idx, updateIter] = useState(0);
+  const [message, updateMessage] = useState(" ");
+  const [char, updateChar] = useState(0);
+  const [isActive, setIsActive] = useState(true);
+
+  useInterval (() => {
+    let newIdx = idx;
+    let newChar = char;
+    if (char - hold >= messages[idx].length) {
+      newIdx += 1;
+      newChar = 0;
+    }
+    if (newIdx === messages.length) {
+      setIsActive(false);
+    }
+    else {
+      updateMessage(messages[newIdx].slice(0, newChar));
+      updateIter(newIdx);
+      updateChar(newChar + 1);
+    }
+  }, isActive ? delay : null);
+
+
+  return (
+    <div className="name">
+      {message}
+    </div>
+  )
+}
+
+export default Home;

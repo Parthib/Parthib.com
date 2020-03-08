@@ -1,0 +1,54 @@
+.outerName {
+}
+
+.firstLine {
+  text-align: center;
+  margin-right: 10%;
+  margin-top: 2em;
+  height: _size(name-size) * 1.2;
+
+  @include respond-to('large') {
+      height: _size(name-size-large) * 1.2;
+  }
+  @include respond-to('medium') {
+      height: _size(name-size-medium) * 1.2;
+  }
+}
+
+.secondLine {
+  text-align: center;
+  margin-left: 10%;
+  line-height: 1.2;
+  height: _size(name-size) * 1.2;
+
+  @include respond-to('large') {
+      height: _size(name-size-medium) * 1.2;
+  }
+  @include respond-to('medium') {
+      height: _size(name-size-medium) * 1.2;
+  }
+}
+
+.name:empty {
+  display: none;
+}
+
+.name {
+  color: _palette(bg);
+  font-family: _font(family-heading);
+  font-weight: _font(weight-heading-bold);
+  letter-spacing: _font(kerning-name);
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-size: _size(name-size);
+  background: _palette(black);
+  padding-left: _font(kerning-name);
+  display: inline-block;
+
+  @include respond-to('large') {
+      font-size: _size(name-size-large)
+  }
+  @include respond-to('medium') {
+      font-size: _size(name-size-medium)
+  }
+}

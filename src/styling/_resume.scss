@@ -1,0 +1,48 @@
+#resume {
+  a {
+    margin-left: 0.3em;
+  }
+
+  padding: 3em;
+
+  ul {
+    list-style: disc;
+    margin: 0;
+  }
+
+  ul li {
+    display: list-item;
+  }
+
+  h2 {
+    text-align: center;
+    margin: 0;
+  }
+
+  h3 {
+    font-family: _font(resume);
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0;
+  }
+
+  h4 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
+  }
+
+  h5 {
+    font-family: _font(resume-heading);
+    font-size: 1.2em;
+    margin: 0;
+    text-transform: uppercase;
+    margin-top: 1em;
+  }
+
+  p {
+    margin: 1em;
+    margin-bottom: 0em;
+  }
+}
