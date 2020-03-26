@@ -1,5 +1,13 @@
 const data = [
   {
+    title: 'Testing the Encryption Chip',
+    link: '/projects/ChipTest',
+    image: '/chipTestProjectIcon.png',
+    date: '2020-03-25',
+    synopsis: 'I finally got back the encryption chip we designed! With the coronavirus '
+      + 'quarantine underway, I kept myself from going outside by messing around with the chip',
+  },
+  {
     title: 'Facebook Chat Data Analysis',
     link: '/projects/FacebookData',
     image: '/facebookProjectIcon.png',
@@ -27,7 +35,7 @@ const data = [
     link: '/projects/WhosHome',
     image: '/digitalsystemsProjectIcon.png',
     date: '2018-05-01',
-    synopsis: 'An device I created with two others for our Digial Systems'
+    synopsis: 'A device I created with two others for our Digial Systems'
       + ' class final project that can tell who\'s home using a distance sensor',
   },
 ];

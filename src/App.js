@@ -13,6 +13,7 @@ import facebookdata from './data/projects/facebookdata.md';
 import zombie from './data/projects/zombie.md';
 import chip from './data/projects/chip.md';
 import whoshome from './data/projects/whoshome.md';
+import chiptest from './data/projects/chiptest.md';
 import aboutme from './data/aboutme.md';
 import data from './data/private';
 
@@ -30,8 +31,9 @@ function App() {
           <Route path="/resume" component={Resume} />
           <Route path="/projects/FacebookData" component={() => <Article markdown={facebookdata} />} />
           <Route path="/projects/ZombieCastleDefense" component={() => <Article markdown={zombie} />} />
-          <Route path="/projects/Chip" component={() => <Article markdown={chip} />} />
           <Route path="/projects/WhosHome" component={() => <Article markdown={whoshome} />} />
+          <Route path="/projects/Chip" component={() => <Article markdown={chip} />} />
+          <Route path="/projects/ChipTest" component={() => <Article markdown={chiptest} />} />
 
         </div>
         </Analytics>

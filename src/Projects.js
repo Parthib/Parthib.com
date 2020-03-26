@@ -14,6 +14,7 @@ function Projects(props) {
             key={project.title}
             />
         ))}
+        <div className="dummyProjDiv"/>
       </div>
     </div>
   )
