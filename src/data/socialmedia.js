@@ -32,7 +32,7 @@ const links = [
     icon: faTwitter,
   },
   {
-    link: 'mailto:michael.l.dangelo@gmail.com',
+    link: 'mailto:contact@parthib.com',
     label: 'Email',
     icon: faEnvelope,
   },
