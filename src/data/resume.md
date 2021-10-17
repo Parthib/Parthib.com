@@ -18,7 +18,7 @@
 **Amazon Web Services,** *Software Development Engineer,* Seattle, WA  
 **Sept. 2019 – Present**
 
-* Develop software to support the EC2 Spot service
+* Develop software to support the EC2 Spot service and APIs
 
 **Dialog System Technology Challenges,** *Research Assistant,* New Haven, CT  
 **May – Sept. 2018**
@@ -51,7 +51,7 @@
 
 **Personal Project,** *Android Developer,* Tucson, AZ  
 **Jun. 2015 – Present**  
-Self-taught Android Development and programmed a 2D Android game made using a physics engine built from scratch. Over 1000 installs on Google Play!
+Self-taught Android Development and programmed a 2D Android game made using a physics engine built from scratch. Over 24,000 installs on Google Play!
 
 **Yale Undergraduate Aerospace Association,** *UAV Team Member,* New Haven, CT  	**Sept. 2015 – Jan. 2017**  
 Constructed the final design for the team’s autonomous UAV by dremeling a carbon-fiber lay-up
@@ -61,11 +61,11 @@ Constructed the final design for the team’s autonomous UAV by dremeling a carb
 ---
 
 **Programming**  
-* Proficient: Java, C, Git, Python, MATLAB, Verilog HDL, Racket, AVR Assembly, Arduino
-* Intermediate: Ruby on Rails, JavaScript, HTML, CSS, React, Raspberry Pi  
+* Proficient: Java, Dart, Python, C, MATLAB, Racket, AVR Assembly, Arduino
+* Intermediate: Ruby on Rails, JavaScript, HTML, CSS, React, Verilog HDL
 
 **Software**  
-* Android Studio, Quartus II, LyX, Arduino IDE, NetBeans, Eclipse, LabStats, Magic VLSI  
+* Flutter, Android Studio, Quartus II, LyX, Arduino IDE, NetBeans, Eclipse, Magic VLSI
 
-**Interests**  
-* Basketball, Ultimate Frisbee, E-Sports, Guitar, Hiking, Spanish, Card Games
+**Cloud Services**
+* EC2, DynamoDB, AWS Lambda, CloudWatch, API Gateway, Firebase Auth
