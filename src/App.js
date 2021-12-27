@@ -15,6 +15,7 @@ import chip from './data/projects/chip.md';
 import whoshome from './data/projects/whoshome.md';
 import chiptest from './data/projects/chiptest.md';
 import aboutme from './data/aboutme.md';
+import fridgeBuddy from './data/projects/fridgebuddy.md'
 import data from './data/private';
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
           <Route path="/projects/WhosHome" component={() => <Article markdown={whoshome} />} />
           <Route path="/projects/Chip" component={() => <Article markdown={chip} />} />
           <Route path="/projects/ChipTest" component={() => <Article markdown={chiptest} />} />
-
+          <Route path="/projects/FridgeBuddy" component={() => <Article markdown={fridgeBuddy} />} />
         </div>
         </Analytics>
     </BrowserRouter>

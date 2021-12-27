@@ -1,5 +1,12 @@
 const data = [
   {
+    title: 'Fridge Buddy',
+    link: '/projects/FridgeBuddy',
+    image:'/fridgeBuddy/fridgeBuddyProjectIcon.png',
+    date: '2021-12-27',
+    synopsis: 'I created an app that scans receipts to figure out the foods you purchased and then gives you reminders for when they are about to expire!'
+  },
+  {
     title: 'Testing the Encryption Chip',
     link: '/projects/ChipTest',
     image: '/chipTestProjectIcon.png',
