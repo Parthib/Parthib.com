@@ -8,7 +8,9 @@ I knew I was also part of the problem, so I wanted to find a way to reduce our w
 
 Over the next twenty months, I spent my spare time sketching out the app, breaking it down into components, and developing the frontend/backend. 456 commits later, I had a fully functioning app beta tested by my friends and approved by Apple and Google!
 
-![App Demo GIF](appDemoGif.gif)
+<video controls id=smallImage>
+  <source src="https://i.imgur.com/oXkBEbG.mp4" type="video/mp4">
+</video>
 
 Let me take you through my nearly 2 year journey...
 
@@ -22,7 +24,9 @@ My first problem was to make something that is cross-platform (i.e. works on bot
 
 Before investing significant time into designing and implementing the app, I wanted to be sure that my app idea was feasible with what is currently possible with Flutter. The most difficult part of the app was the optical character recognition (OCR) aspect which was needed to make the process of adding groceries to the app via receipts as frictionless as possible. Unfortunately, I did not have a large dataset of receipts to train a neural network, so I decided to do the next best thing and have Google do the OCR for me on-device through their [ML Kit](https://developers.google.com/ml-kit/vision/text-recognition) package. I wanted to see how well it worked, so I wrote a quick demo app:
 
-![Text Recognition Demo App Video](textRecognitionDemoApp.gif)
+<video controls id=smallImage>
+  <source src="https://i.imgur.com/kUR7BV0.mp4" type="video/mp4">
+</video>
 
 The text recognition worked pretty well! With the demo out of the way, I gained enough confidence in Flutter to take the project more seriously.
 
@@ -32,31 +36,31 @@ When creating an app, it's always good to have reference drawings on what you pl
 
 #### Home Screen
 
-![Home Screen Sketch](../fridgeBuddy/homeScreenSketch.png) ![Actual Home Screen](../fridgeBuddy/actualHomeScreen.png)
+<img src="../fridgeBuddy/homeScreenSketch.png" alt="Home Screen Sketch" id="smallImage"/> <img src="../fridgeBuddy/actualHomeScreen.png" alt="Actual Home Screen" id="smallImage"/>
 
 Since the sketch, I decided to simplify the bottom navigation bar, but otherwise it's mostly the same! You'll also notice that I initially called my app "Grocery Expiry." Since then I realized that might not be as catchy, so I switched to "Fridge Buddy" before release.
 
 #### Adding an Item
 
-![Add Item Sketch](../fridgeBuddy/addItemSketch.png) ![Actual Add Item Screen](../fridgeBuddy/actualAddItemScreen.png)
+<img src="../fridgeBuddy/addItemSketch.png" alt="Add Item Sketch" id="smallImage"/> <img src="../fridgeBuddy/actualAddItemScreen.png" alt="Actual Add Item Screen" id="smallImage"/>
 
 Minor changes here since the sketch including a quantity button, but otherwise mostly the same.
 
 #### Editing Scanned Items from a Receipt
 
-![Edit Receipt Items Sketch](../fridgeBuddy/editReceiptItemsSketch.png) ![Actual Edit Receipt Screen](../fridgeBuddy/actualEditReceiptScreen.jpg)
+<img src="../fridgeBuddy/editReceiptItemsSketch.png" alt="Edit Receipt Items Sketch" id="smallImage"/> <img src="../fridgeBuddy/actualEditReceiptScreen.png" alt="Actual Edit Receipt Screen" id="smallImage"/>
 
 This one is still mostly the same, though I did simply the UI a bit further by removing the edit button for each tile. In the final design, tapping on the tile itself brings up the edit menu.
 
 #### Login Screen
 
-![Login Screen Sketch](../fridgeBuddy/loginScreenSketch.png) ![Actual Login Screen](../fridgeBuddy/actualLoginScreen.png)
+<img src="../fridgeBuddy/loginScreenSketch.png" alt="Login Screen Sketch" id="smallImage"/> <img src="../fridgeBuddy/actualLoginScreen.png" alt="Actual Login Screen" id="smallImage"/>
 
 This one deviated quite a bit because I decided to allow logging in without a 3rd-party provider like Google or Facebook. I also had to add support for logging in with Apple because [they started requiring recently](https://developer.apple.com/app-store/review/guidelines/#sign-in-with-apple).
 
 #### Settings Screen
 
-![Settings Screen Sketch](../fridgeBuddy/settingsScreenSketch.png) ![Actual Login Screen](../fridgeBuddy/actualSettingsScreen.png)
+<img src="../fridgeBuddy/settingsScreenSketch.png" alt="Settings Screen Sketch" id="smallImage"/> <img src="../fridgeBuddy/actualSettingsScreen.png" alt="Actual Login Screen" id="smallImage"/>
 
 This one also deviated significantly because I later decided to move the logging in section to a separate page to reduce the clutter and better compartmentalize the app.
 
@@ -128,7 +132,7 @@ I created one API that could perform the appropriate receipt/purchase token vali
 
 I also wanted to provide more features to people who get the "Pro" version of the Fridge Buddy app. I decided to integrate a few extra perks like increased max food entries per list, more lists per user, and more users per list into the backend and app logic.
 
-![Pro Perks Page](../fridgeBuddy/fridgeBuddyProPage.png)
+<img src="../fridgeBuddy/fridgeBuddyProPage.png" alt="Pro Perks Page" id="smallImage"/>
 
 ### Pre-Launch Work: October 2021 - December 2021
 
