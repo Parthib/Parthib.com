@@ -104,7 +104,7 @@ By November 2020, the basic app was complete, but I wanted to add a couple more 
 
 Here's the basic architecture of the backend design I came up with for my APIs:
 
-<img src="../fridgeBuddy/basicArchitecture.png" alt="Basic Backend Architecture Diagram Image" id="largeImage"/>
+<img src="../fridgeBuddy/basicArchitecture.png" alt="Basic Backend Architecture Diagram Image" id="smallImage"/>
 
 I use Firebase to authenticate calls to my backend since that's what manages my logins. I used [AWS API Gatway](https://aws.amazon.com/api-gateway/) and [AWS Lambda](https://aws.amazon.com/lambda/) to create an API that the app can reach out to. The lambda function works with a [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) database to retrieve information it needs (such as credit information for a particular image or the location in an [Amazon S3](https://aws.amazon.com/s3/) bucket for the image), and it works with S3 to retrieve an image URL to return back to the user. This is the design pattern I used for most of my APIs.
 
@@ -126,7 +126,7 @@ Half of the time here was spent just finding royalty-free images on the web for 
 
 I wanted to offer users the ability to remove in-app ads by purchasing a "Pro" version of my app, so I turned to Flutter's [in_app_purchase](https://pub.dev/packages/in_app_purchase) dependency to help me out. The general workflow is that between both iOS and Android, when an in-app purchase is made, I need to verify some credential provided by the user's app against Apple's/Google's servers. If the credential could be validated, then I could give the user "Pro" access to my app. I also needed to periodically check that the purchases were not refunded or that subscriptions did not expire because otherwise I would need to remove a user's "Pro" status. All this required the implementation of a different backend:
 
-<img src="../fridgeBuddy/verifyPurchaseArchitecture.png" alt="Verify Purchase Architecture Image" id="largeImage"/>
+<img src="../fridgeBuddy/verifyPurchaseArchitecture.png" alt="Verify Purchase Architecture Image" id="smallImage"/>
 
 I created one API that could perform the appropriate receipt/purchase token validations against Apple's or Google's servers. If the user made a purchase, then the purchase validation lambda function will reach out to Google or Apple to validate the purchase, record the event in a DynamoDB table, and give the user Pro access if the transaction was verified. A scheduled AWS CloudWatch event also periodically triggers the purchase verification Lambda function to check for expired subscriptions and refunded purchases. I got the idea for this architecture from [this example diagram](https://d1.awsstatic.com/architecture-diagrams/ArchitectureDiagrams/in-app-receipt-validation-ra.pdf) provided by AWS.
 
