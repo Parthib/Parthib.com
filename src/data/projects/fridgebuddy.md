@@ -70,7 +70,7 @@ At this point, all that was left in terms of planning was to break down each maj
 
 Here's a sample of what the Trello board looked like:
 
-![Trello Board Image](../fridgeBuddy/trello.png)
+<img src="../fridgeBuddy/trello.png" alt="Trello Board Image" id="medImage"/>
 
 ## Making The App: May 2020 - November 2021
 
@@ -80,7 +80,7 @@ Over the next year and a half, I authored 460 commits on my private git reposito
 
 I still had to do some processing on the text given to me by Google's OCR to figure out what food was purchased, so I wrote a few scripts to parse data sourced from [a food safety database hosted by the USDA](https://catalog.data.gov/pt_PT/dataset/fsis-foodkeeper-data/resource/2128aebe-b3dd-4b4d-8315-e88d106bd741). I then devised a modified [edit distance algorithm](https://en.wikipedia.org/wiki/Levenshtein_distance) to determine what food from the database was seen on a given receipt. By this point, I could scan a receipt, get what foods were purchased, and retrieve information on when those foods were going to expire using my database. My barebones app looked like this after completing the receipt parsing:
 
-![Primitive App Receipt Parsing](../fridgeBuddy/initialParsing.jpg)
+<img src="../fridgeBuddy/initialParsing.jpg" alt="Primitive App Receipt Parsing" id="smallImage"/>
 
 ### Basic Functionality - May 2020 to October 2020
 
@@ -104,7 +104,7 @@ By November 2020, the basic app was complete, but I wanted to add a couple more 
 
 Here's the basic architecture of the backend design I came up with for my APIs:
 
-![Basic Backend Architecture Diagram Image](../fridgeBuddy/basicArchitecture.png)
+<img src="../fridgeBuddy/basicArchitecture.png" alt="Basic Backend Architecture Diagram Image" id="largeImage"/>
 
 I use Firebase to authenticate calls to my backend since that's what manages my logins. I used [AWS API Gatway](https://aws.amazon.com/api-gateway/) and [AWS Lambda](https://aws.amazon.com/lambda/) to create an API that the app can reach out to. The lambda function works with a [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) database to retrieve information it needs (such as credit information for a particular image or the location in an [Amazon S3](https://aws.amazon.com/s3/) bucket for the image), and it works with S3 to retrieve an image URL to return back to the user. This is the design pattern I used for most of my APIs.
 
@@ -126,7 +126,7 @@ Half of the time here was spent just finding royalty-free images on the web for 
 
 I wanted to offer users the ability to remove in-app ads by purchasing a "Pro" version of my app, so I turned to Flutter's [in_app_purchase](https://pub.dev/packages/in_app_purchase) dependency to help me out. The general workflow is that between both iOS and Android, when an in-app purchase is made, I need to verify some credential provided by the user's app against Apple's/Google's servers. If the credential could be validated, then I could give the user "Pro" access to my app. I also needed to periodically check that the purchases were not refunded or that subscriptions did not expire because otherwise I would need to remove a user's "Pro" status. All this required the implementation of a different backend:
 
-![Verify Purchase Architecture Image](../fridgeBuddy/verifyPurchaseArchitecture.png)
+<img src="../fridgeBuddy/verifyPurchaseArchitecture.png" alt="Verify Purchase Architecture Image" id="largeImage"/>
 
 I created one API that could perform the appropriate receipt/purchase token validations against Apple's or Google's servers. If the user made a purchase, then the purchase validation lambda function will reach out to Google or Apple to validate the purchase, record the event in a DynamoDB table, and give the user Pro access if the transaction was verified. A scheduled AWS CloudWatch event also periodically triggers the purchase verification Lambda function to check for expired subscriptions and refunded purchases. I got the idea for this architecture from [this example diagram](https://d1.awsstatic.com/architecture-diagrams/ArchitectureDiagrams/in-app-receipt-validation-ra.pdf) provided by AWS.
 
@@ -140,7 +140,7 @@ I also wanted to provide more features to people who get the "Pro" version of th
 
 No app is complete without a website! Up until this point I had been using the name "Grocery Expiry", which by this point multiple people had told me does not sound good 😔. I decided to claim https://www.fridgebuddy.io, quickly create a website for the domain in React, and rename my app to Fridge Buddy. I also came up with this silly guy for the logo:
 
-![Fridge Buddy Logo](../fridgeBuddy/fridgeBuddyLogo.png)
+<img src="../fridgeBuddy/fridgeBuddyLogo.png" alt="Fridge Buddy Logo" id="smallImage"/>
 
 #### Google Play and Apple App Store Approval - November 2021
 
