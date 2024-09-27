@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
+import rehypeRaw from 'rehype-raw';
 
 const LinkRenderer = ({ ...children }) => <Link {...children} />;
 
@@ -28,12 +29,11 @@ function Article(props) {
       <a href='#' onClick={handleClick} className="back">
         <FontAwesomeIcon icon={faArrowCircleLeft}/>
       </a>
-      <ReactMarkdown
-      source={markdownText}
-      renderers={{
+      <ReactMarkdown rehypePlugins={[rehypeRaw]}
+      children={markdownText}
+      components={{
         Link: LinkRenderer,
       }}
-      escapeHtml={false}
       />
     </div>
   )

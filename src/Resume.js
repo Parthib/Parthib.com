@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faFilePdf } from '@fortawesome/free-regular-svg-icons';
 import markdown from './data/resume.md';
+import rehypeRaw from 'rehype-raw';
 
 const LinkRenderer = ({ ...children }) => <Link {...children} />;
 
@@ -30,12 +31,11 @@ function Resume(props) {
             <FontAwesomeIcon icon= {faFilePdf}/>
           </a>
         </h2>
-        <ReactMarkdown
-        source={markdownText}
-        renderers={{
+        <ReactMarkdown rehypePlugins={[rehypeRaw]}
+        children={markdownText}
+        components={{
           Link: LinkRenderer,
         }}
-        escapeHtml={false}
         />
       </div>
     </div>

@@ -6,7 +6,7 @@
 ---
 
 **Yale University**, New Haven, CT  
-** May 2019 **  
+**May 2019**  
 *B.S. in Electrical Engineering and Computer Science,* GPA: 3.90  
 *Relevant Coursework:* Data Structures, Computer Architecture, System Programming & Computer Organization, Algorithms, Natural Language Processing, Linear Algebra, Multivariable Calculus, Embedded Systems, Communication & Computation, Functional Programming, Computer Networks, Silicon Compilation  
 *Awards:* Magna Cum Laude, Tau Beta Pi Engineering Honor Society, Tau Beta Pi Stabile Scholar

@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import markdown from './data/contact.md';
 import links from './data/socialmedia';
 
+import rehypeRaw from 'rehype-raw';
+
 const LinkRenderer = ({ ...children }) => <Link {...children} />;
 
 function Contact(props) {
@@ -23,12 +25,11 @@ function Contact(props) {
   return (
     <div>
       <div className="content">
-        <ReactMarkdown
-        source={markdownText}
-        renderers={{
-          Link: LinkRenderer,
-        }}
-        escapeHtml={false}
+        <ReactMarkdown rehypePlugins={[rehypeRaw]}
+          children={markdownText}
+          components={{
+            Link: LinkRenderer,
+          }}
         />
 
         <ul className="media">

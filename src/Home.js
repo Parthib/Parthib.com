@@ -6,6 +6,8 @@ import DynamicName from "./props/DynamicName.js"
 
 import markdown from './data/mainMessage.md';
 
+import rehypeRaw from 'rehype-raw';
+
 const LinkRenderer = ({ ...children }) => <Link {...children} />;
 
 function Home(props) {
@@ -23,12 +25,11 @@ function Home(props) {
   return (
     <div>
       <DynamicName/>
-      <ReactMarkdown
-        source={markdownText}
-        renderers={{
+      <ReactMarkdown rehypePlugins={[rehypeRaw]}
+        children={markdownText}
+        components={{
           Link: LinkRenderer,
         }}
-        escapeHtml={false}
         className='content'
       />
     </div>
